@@ -1,0 +1,2 @@
+python mmocr/utils/ocr.py data/test/0864.jpg --print-result --imshow
+python mmocr/utils/ocr.py data/test/0040.jpg --output demo/det_out.jpg --det TextSnake --recog None --export demo/

@@ -1,0 +1,10 @@
+python tools/train.py configs/textdet/dbnet/dbnet_r18_fpnc_1200e_icdar2015.py --work-dir dbnet
+python mmocr/utils/ocr.py data/test/0139.jpg --output demo/det_out.jpg --det TextSnake --recog None --imshow
+
+python mmocr/utils/ocr.py data/test/0484.jpg --output demo/det_out.jpg --det TextSnake --recog None --imshow
+python mmocr/utils/ocr.py data/test/0893.jpg --output demo/det_out.jpg --det TextSnake --recog None --imshow
+python mmocr/utils/ocr.py data/test/0975.jpg --output demo/det_out.jpg --det TextSnake --recog None --imshow
+python mmocr/utils/ocr.py data/test/0866.jpg --output demo/det_out.jpg --det TextSnake --recog None --imshow
+
+python tools/test.py configs/textdet/dbnet/dbnet_r18_fpnc_1200e_icdar2015.py dbnet/latest.pth --eval hmean-iou
+
